@@ -1,0 +1,113 @@
+{
+  "id": "farbfelder",
+  "name": { "de": "Farbfelder", "en": "Color Fields" },
+  "version": "0.5.1",
+  "description": {
+    "de": "Lauf mit dem Handy übers Feld, färb Kästchen in deiner Farbe und kleckse; ist die Zeit um, gewinnt, wer die meisten hat",
+    "en": "Run across the field with your phone, paint squares in your color and splat; when time is up, whoever has the most wins"
+  },
+  "repository": "https://github.com/hearthbit/gamehearth-farbfelder",
+  "languages": [
+    "de",
+    "en"
+  ],
+  "cover": "cover.svg",
+  "sdk": "^0.1.6",
+  "license": {
+    "code": "MIT",
+    "assets": "CC0-1.0"
+  },
+  "mode": "realtime",
+  "players": {
+    "min": 2,
+    "max": 8
+  },
+  "server": true,
+  "client": "dist/client",
+  "stats": {
+    "siege": {
+      "label": {
+        "de": "Siege",
+        "en": "Wins"
+      },
+      "better": "higher"
+    }
+  },
+  "roles": {
+    "screen": {
+      "inputs": [],
+      "screen": "large"
+    },
+    "controller": {
+      "inputs": [
+        "touch",
+        "keyboard"
+      ],
+      "screen": "small"
+    }
+  },
+  "options": {
+    "spielzeit": {
+      "label": {
+        "de": "Spielzeit",
+        "en": "Duration"
+      },
+      "type": "choice",
+      "default": 90,
+      "choices": [
+        {
+          "value": 60,
+          "label": {
+            "de": "1 Minute",
+            "en": "1 minute"
+          }
+        },
+        {
+          "value": 90,
+          "label": {
+            "de": "1,5 Minuten",
+            "en": "1.5 minutes"
+          }
+        },
+        {
+          "value": 120,
+          "label": {
+            "de": "2 Minuten",
+            "en": "2 minutes"
+          }
+        }
+      ]
+    },
+    "feld": {
+      "label": {
+        "de": "Feldgröße",
+        "en": "Field size"
+      },
+      "type": "choice",
+      "default": "mittel",
+      "choices": [
+        {
+          "value": "klein",
+          "label": {
+            "de": "Klein",
+            "en": "Small"
+          }
+        },
+        {
+          "value": "mittel",
+          "label": {
+            "de": "Mittel",
+            "en": "Medium"
+          }
+        },
+        {
+          "value": "gross",
+          "label": {
+            "de": "Groß",
+            "en": "Large"
+          }
+        }
+      ]
+    }
+  }
+}
